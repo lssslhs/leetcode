@@ -27,8 +27,6 @@ var findKth = function(arrA, startA, arrB, startB, k) {
   var mid = parseInt(k/2);
   var valueA = startA + mid -1 >= arrA.length? Number.MAX_VALUE: arrA[startA+mid-1];
   var valueB = startB + mid -1 >= arrB.length? Number.MAX_VALUE: arrB[startB+mid-1];
-  console.log(valueA);
-  console.log(valueB);
   if(valueA>valueB) {
     return findKth(arrA, startA, arrB, startB+mid, k - mid);
   }
